@@ -1,0 +1,14 @@
+spring:
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+    encoding: UTF-8
+    content-type: text/html
+  data:
+    solr:
+      host: http://localhost:8983/solr/Football
+
+server:
+  port: 8089
+

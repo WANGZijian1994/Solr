@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8" content="text/html" http-equiv="Content-Type">
+    </head>
+</head>
+<body>
+    <div>Qui a marqué le plus de buts à domicile???</div>
+    <table>
+        <tr>
+            <td>球队</td>
+            <td>比分</td>
+        </tr>
+        <tr th:each="item : ${domicile}">
+            <td th:each="entry : ${item}" th:text="${entry.key}"/>
+            <td th:each="entry : ${item}" th:text="${entry.value}"/>
+        </tr>
+
+    </table>
+</body>
+</html>

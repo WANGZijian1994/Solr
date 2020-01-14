@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" content="text/html" http-equiv="Content-Type">
+    <title>Bonjour le Monde!</title>
+</head>
+<body>
+    <table border = "1">
+        <tr>
+            <td>2018_2019</td>
+            <td>主队</td>
+            <td>比分</td>
+            <td>客队</td>
+        </tr>
+        <tr th:each="item : ${list}">
+            <td th:text="${item.Date}"/>
+            <td th:utext="${item.Domicile}"/>
+            <td th:text="${item.Note_Final}"/>
+            <td th:text="${item.Visiteur}"/>
+        </tr>
+    </table>
+    <div></div>
+    <div>Quelques données intéressantes pour OM pendant la saison 2018-2019</div>
+    <div></div>
+    <table>
+        <tr th:each="item : ${list1}">
+            <td th:text="${item.Matchs}"/>
+            <td th:text="${item.Goals}"/>
+            <td th:text="${item.Lost}"/>
+        </tr>
+    </table>
+
+
+</body>
+</html>
